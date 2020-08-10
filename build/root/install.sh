@@ -34,6 +34,12 @@ fi
 # pacman packages
 ####
 
+# update pacman mirror list
+mv /etc/pacman.d/mirrorlist{.pacnew,}
+
+# update pacman package cache
+pacman -Sy
+
 # define pacman packages
 pacman_packages="kmod openvpn privoxy bind-tools gnu-netcat ipcalc"
 
